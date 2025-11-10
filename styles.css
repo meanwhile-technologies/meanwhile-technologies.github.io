@@ -92,7 +92,7 @@ header {
 }
 
 .brand img {
-  height: 28px;
+  height: 50px;
   width: auto;
   display: block;
 }
@@ -130,26 +130,28 @@ nav a:hover {
 /* Hero */
 .hero {
   max-width: var(--maxw);
-  margin: clamp(40px, 8vw, 120px) auto 60px;
+  margin: clamp(80px, 16vw, 250px) auto 60px;
   padding: 0 20px;
-  padding-left: 25%; /* Adjust this percentage to move the block */
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
+  position: relative;
+  left: 15%; /* Shift the entire block to the right */
 }
 
 h1 {
   margin: 0;
   line-height: 1.04;
   font-weight: 800;
-  font-size: clamp(36px, 6.2vw, 72px);
+  font-size: clamp(28px, 5vw, 58px);
   letter-spacing: -0.01em;
+  max-width: 700px;
 }
 
 .lead {
   margin: 12px 0 24px;
-  max-width: 750px;
+  max-width: 480px;
   color: var(--muted);
   font-size: clamp(16px, 1.6vw, 20px);
   line-height: 1.6;
@@ -161,7 +163,7 @@ h1 {
   gap: 0;
   align-items: center;
   flex-wrap: nowrap; /* Prevent wrapping */
-  max-width: 550px; /* Constrain the width of the form */
+  max-width: 450px; /* Constrain the width of the form */
 }
 
 .input-wrap {
@@ -230,9 +232,19 @@ footer {
 }
 
 /* Responsive tweaks */
+@media (max-width: 1200px) {
+  .hero {
+    padding-left: 20%;
+  }
+}
+
 @media (max-width: 960px) {
   .tagline {
     display: none;
+  }
+  .hero {
+    padding-left: 20px;
+    margin: 44px auto 54px;
   }
 }
 
@@ -243,9 +255,5 @@ footer {
   
   nav a {
     font-size: .95rem;
-  }
-  
-  .hero {
-    margin: 44px auto 54px;
   }
 }
