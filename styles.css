@@ -195,13 +195,14 @@ h1 {
 .signup button {
   appearance: none;
   cursor: pointer;
-  padding: 14px 18px;
+  padding: 14px 28px;
   border-radius: 0;
-  border: 1px solid var(--accent);
+  border: 2px solid var(--teal);
   background: var(--teal);
   color: var(--bg);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
+  box-sizing: border-box;
 }
 
 .signup button:hover {
